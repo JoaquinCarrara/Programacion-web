@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.titulo {
+    /* color: black;
+    background-color: cadetblue;
+    height: 100px;
+    text-align: center;
+    font-size: 2.0rem;
+    align-content: center;
+    font-weight: bold; */
+
+}
+
+/* comienzo nav */
+/* --- BANNER PRINCIPAL --- */
+.banner-principal {
+    width: 100%;
+    /* Le damos un fondo blanco idéntico al de tu imagen para que se fusione */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Sombra opcional abajo del banner para separarlo de los productos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    /* Espacio antes de que empiecen las tarjetas */
+}
+
+.banner-img {
+    width: 100%;
+    max-width: 1200px;
+    max-height: 400px;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.navbar {
+    max-width: 1100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #2D3238;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #007bff;
+}
+
+/* fin nav  */
+.tituloCatalogo {
+    margin-top: 15px;
+}
+
+article h3,
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
+#catalogo li {
+    margin: 13px;
+    width: 20%;
+    text-decoration: none;
+    list-style: none;
+}
+
+#catalogo li a {
+    text-decoration: none;
+
+}
+
+
+.items {
+    font-style: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+}
+
+#ofertas li {
+    margin: 5px;
+}
+
+#ofertas li a {
+    text-decoration: none;
+}
+
+/* estilos de card */
+
+.moderna {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 300px;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.moderna:hover {
+    transform: translateY(-5px);
+}
+
+.moderna img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.moderna .card-contenido {
+    padding: 20px;
+    text-align: center;
+}
+
+.moderna .card-titulo {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.moderna .card-precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff5722;
+    margin: 0 0 15px 0;
+}
+
+.moderna .card-btn {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.moderna .card-btn:hover {
+    background-color: #e64a19;
+}
+
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* Espacio entre las tarjetas */
+    justify-content: center;
+    /* Las centra en la pantalla */
+    padding: 20px;
+}
+
+.moderna.sin-stock {
+    opacity: 0.6;
+    filter: grayscale(80%);
+}
+
+
+footer {
+    text-align: center;
+    font-size: 2rem;
+}
