@@ -6,6 +6,7 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>TechStore - Tu tienda de tecnología</title>
   <link rel='stylesheet' href='estilos.css'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -16,32 +17,63 @@
       <img src="./imagenes/imgpng.png" alt="Portada de Tech House" class="banner-img">
     </section>
     <nav class="navbar">
+
+      <div class="logo">TechHouse</div>
+
       <ul class="nav-links">
         <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#productos">Productos</a></li>
+        <li><a href="#catalogo">Productos</a></li>
+        <li><a href="#ofertas">Ofertas</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+
+      <div class="carrito-nav" title="Ver carrito">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="carrito-contador">0</span>
+      </div>
+
     </nav>
   </header>
 
   <main>
-    <section id="catalogo">
-      <h2 class="tituloCatalogo">Catalogo de productos</h2>
 
-      <div id="productos" class="contenedor-productos"></div>
+    <section id="catalogo">
+      <div class="catalogo-cabecera">
+
+        <div class="balance-vacio"></div>
+        <h2>Catálogo de productos</h2>
+
+        <div class="buscador-contenedor">
+          <input type="text" id="input-buscador" placeholder="Buscar por nombre o marca...">
+        </div>
+
+      </div>
+      <div class="contenedor-productos"></div>
 
     </section>
+
+
 
     <section id="ofertas">
       <h2>Ofertas y novedades</h2>
-      <ul>
-        <li><a href="" class="items">Televisor</a></li>
-        <li><a href="" class="items">Lavarropas</a></li>
-        <li><a href="" class="items">Licuadora</a></li>
-      </ul>
+
+      <div class="carrusel-contenedor">
+        <button id="btn-prev" class="carrusel-btn">&lt;</button>
+        <div id="carrusel-ofertas" class="carrusel-track"></div>
+        <button id="btn-next" class="carrusel-btn">&gt;</button>
+      </div>
     </section>
-    <footer>
-      <h6>Joaquin Carrara - 2do año </h6>
+
+    <footer id="contacto">
+      <div class="footer-contenido">
+        <p>&copy; 2026 TechHouse. Todos los derechos reservados.</p>
+        <p class="footer-creditos">Diseñado y desarrollado por <span>Joaquin Carrara</span> — 2° año</p>
+      </div>
     </footer>
   </main>
 
