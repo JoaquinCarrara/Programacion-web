@@ -9,6 +9,15 @@ html {
     scroll-padding-top: 100px;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0e5ec;
+    background-image: radial-gradient(rgba(45, 50, 56, 0.1) 1.5px, transparent 1.5px);
+    background-size: 25px 25px;
+
+    color: #333;
+}
+
 /*------------------------- comienzo nav ------------------------ */
 
 .banner-principal {
@@ -27,6 +36,198 @@ html {
     object-fit: contain;
     padding: 20px;
 }
+
+/* --- ENLACE DE LOGIN  --- */
+.btn-login-banner {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    transition: color 0.3s ease;
+}
+
+.btn-login-banner::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ff5722;
+    transition: width 0.3s ease;
+
+}
+
+
+.btn-login-banner:hover {
+    color: #ff5722;
+}
+
+.btn-login-banner:hover::after {
+    width: 100%;
+}
+
+/* ------------ PÁGINA DE LOGIN -------------*/
+
+.pagina-login {
+    background-image: linear-gradient(rgba(15, 23, 36, 0.6), rgba(15, 23, 36, 0.8)), url('https://images.unsplash.com/photo-1614624532983-4ce03382d63d?w=1920');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+.login-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 40px 35px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.login-box h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.login-box h2 a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-box h2 a:hover {
+    color: #ff5722;
+}
+
+.login-box p {
+    font-size: 0.85rem;
+    color: #a0a5ab;
+    margin-bottom: 25px;
+}
+
+.login-box .input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login-box .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.login-box .input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    /* Input un poco más fino */
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.login-box .input-group input:focus {
+    border-color: #ff5722;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+}
+
+.login-box .opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.8rem;
+}
+
+.login-box .recordar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.login-box .recordar input[type="checkbox"] {
+    accent-color: #ff5722;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.login-box .olvide {
+    color: #ff5722;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-box .olvide:hover {
+    color: #e64a19;
+    text-decoration: underline;
+}
+
+.login-box .btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.login-box .btn-submit:hover {
+    background-color: #e64a19;
+}
+
+.login-box .btn-submit:active {
+    transform: scale(0.98);
+}
+
+.login-box .volver {
+    margin-top: 25px;
+}
+
+.login-box .volver a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+}
+
+.login-box .volver a:hover {
+    color: #fff;
+}
+
+/* -------------FIN LOGIN-------------- */
 
 .navbar {
     max-width: 1100%;
@@ -392,9 +593,6 @@ h2 {
     border-radius: 2px;
 }
 
-/* ==========================================================================
-   CARRUSEL DE OFERTAS Y TARJETAS MINI (ESTILO HOT SALE)
-   ========================================================================== */
 
 /* --- CONTENEDOR DEL CARRUSEL --- */
 .carrusel-contenedor {
@@ -452,6 +650,110 @@ h2 {
 
 #btn-next {
     right: -10px;
+}
+
+/* ----------------- Servicio tenico ----------------- */
+
+.seccion-oscura {
+    background-color: #2D3238;
+    color: #ffffff;
+    padding: 80px 20px;
+    margin: 60px 0;
+}
+
+.servicio-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.servicio-texto {
+    flex: 1;
+}
+
+.etiqueta-naranja {
+    color: #ff5722;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.servicio-texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+}
+
+.servicio-texto p {
+    color: #A0A5AB;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.lista-servicios {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.lista-servicios li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #e0e5ec;
+    line-height: 1.4;
+}
+
+.btn-primario {
+    display: inline-block;
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primario:hover {
+    background-color: #e64a19;
+    transform: translateY(-3px);
+}
+
+
+.servicio-imagen {
+    flex: 1;
+    position: relative;
+}
+
+.servicio-imagen img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .servicio-contenedor {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .lista-servicios li {
+        text-align: left;
+    }
 }
 
 /* --- TARJETA DE OFERTAS (ESTILO "HOT SALE") --- */
