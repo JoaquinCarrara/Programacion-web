@@ -301,6 +301,102 @@ body {
 
 /* ------------- FIN BUSCADOR ---------------- */
 
+/* --------- FILTROS DE CATEGORÍAS --------- */
+.filtros-categorias {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.btn-filtro {
+    background-color: transparent;
+    border: 2px solid #d1d5db;
+    color: #6b7280;
+    padding: 8px 22px;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-filtro:hover {
+    border-color: #ff5722;
+    color: #ff5722;
+}
+
+.btn-filtro.activo {
+    background-color: #ff5722;
+    border-color: #ff5722;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(255, 87, 34, 0.25);
+}
+
+/* --- BARRA DE FILTROS ACTIVOS --- */
+.filtros-activos-barra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.badge-filtro-activo {
+    background-color: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: aparecerFiltro 0.2s ease-out;
+}
+
+@keyframes aparecerFiltro {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.btn-quitar-filtro {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.btn-quitar-filtro:hover {
+    color: #ff5722;
+    /* Tu naranja distintivo */
+}
+
+/* --------- FILTROS DE CATEGORÍAS --------- */
+
 /* --- ICONO DEL CARRITO EN EL NAV --- */
 .carrito-nav {
     position: relative;
@@ -400,8 +496,8 @@ body {
     }
 }
 
-
 /* --------------fin catalog ---------------------- */
+
 
 /* ------------------- fin nav ------------- */
 
@@ -756,7 +852,7 @@ h2 {
     }
 }
 
-/* --- TARJETA DE OFERTAS (ESTILO "HOT SALE") --- */
+/* --- TARJETA DE OFERTAS  --- */
 .moderna-mini {
     background-color: #ffffff;
     border-radius: 8px;
@@ -889,4 +985,249 @@ footer {
     font-weight: 600;
 }
 
+/* --- REDES SOCIALES EN FOOTER --- */
+.redes-sociales {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.redes-sociales a {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 12px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    transform: translateY(-5px);
+    color: #ffffff;
+}
+
+.redes-sociales a[title="Instagram"]:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    box-shadow: 0 5px 15px rgba(214, 36, 159, 0.4);
+    /* Sombrita rosa */
+}
+
+.redes-sociales a[title="WhatsApp"]:hover {
+    background-color: #25D366;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+    /* Sombrita verde */
+}
+
 /* ------------- FIN FOOTER --------------- */
+
+/* ------- INICIO FICHA TECNICA ---------- */
+
+.modal-oculto {
+    display: none;
+}
+
+.modal-activo {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(15, 23, 36, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-contenido {
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    /* Que las esquinas queden redonditas */
+    animation: aparecerModal 0.3s ease-out;
+}
+
+@keyframes aparecerModal {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.btn-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: #f1f3f5;
+    border: none;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.btn-cerrar:hover {
+    background: #ff5722;
+    color: white;
+}
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 400px;
+}
+
+.modal-imagen-contenedor {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.modal-imagen-contenedor img {
+    max-width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    /* Evita fondos blancos feos en las fotos */
+}
+
+.modal-info {
+    padding: 40px;
+    text-align: left;
+}
+
+.lista-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-specs li {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lista-specs li strong {
+    color: #2D3238;
+}
+
+@media (max-width: 768px) {
+    .modal-grid {
+        grid-template-columns: 1fr;
+        /* Pasa a una sola columna */
+    }
+
+    .modal-imagen-contenedor {
+        padding: 20px;
+        height: 250px;
+    }
+
+    .modal-info {
+        padding: 25px;
+    }
+}
+
+/* --- SUB-FILTROS DE MARCAS --- */
+.filtros-marcas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    transition: opacity 0.3s ease;
+}
+
+.filtros-marcas.oculto {
+    display: none;
+}
+
+.btn-marca {
+    background-color: #f1f3f5;
+    border: 1px solid #e5e7eb;
+    color: #4b5563;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-marca:hover {
+    background-color: #e2e8f0;
+}
+
+.btn-marca.activo {
+    background-color: #2D3238;
+    color: white;
+    border-color: #2D3238;
+}
+
+/* ------- FIN FICHA TECNICA -------- */
+
+/* ------ PAGINACIÓN ------ */
+.paginacion-estilos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.btn-pagina {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #4b5563;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-pagina:hover {
+    border-color: #ff5722;
+    color: #ff5722;
+}
+
+.btn-pagina.activo {
+    background-color: #ff5722;
+    border-color: #ff5722;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+}
+
+/* ----- FIN PAGINACION ------ */
